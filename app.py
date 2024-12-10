@@ -13,6 +13,9 @@ st.set_page_config(
 )
 st.image('https://cdn3.iconfinder.com/data/icons/pixel-social-media-2/16/Youtube-512.png', width=100)
 st.title('YouTube Rewind 2024')
+st.write("#### ✨YoutubeRewind is a fun project that gives YouTube users a cool way to look back at their watching habits, kind of like Spotify Wrapped but for YouTube.✨")
+st.write("##### It takes your watch history and turns it into interesting stats 📊, like your most-watched channels, favorite videos, and how your viewing patterns change over time. You can even see which genres, like gaming or education, you watch the most.")
+st.write("##### ‍💻Built with Streamlit, it’s all about keeping things simple and visually fun with charts, heatmaps, and timelines.")
 uploaded_file = st.file_uploader("Upload watch-history.json", type=["json"])
 
 def load_data(file):

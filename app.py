@@ -6,7 +6,7 @@ import pandas as pd
 import plost
 import requests
 import isodate
-
+st.set_page_config(layout="wide")
 st.image('https://cdn3.iconfinder.com/data/icons/pixel-social-media-2/16/Youtube-512.png', width=100)
 st.title('YouTube Rewind 2024')
 uploaded_file = st.file_uploader("Upload watch-history.json", type=["json"])
@@ -220,7 +220,7 @@ if uploaded_file is not None:
         legend='left')
     st.write(f'#### _Wish your leetcode profile was this consistent huh?_')
     st.divider()
-    vid_ids = df_tot['video_id'].sample(n = 600).tolist()
+    vid_ids = df_tot['video_id'].sample(n = 1000).tolist()
     list_genres = get_video_details(vid_ids, key)
     df_genres = pd.DataFrame(list_genres)
     temp = df_genres['genre'].value_counts().reset_index()

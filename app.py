@@ -218,7 +218,7 @@ if uploaded_file is not None:
         legend='left')
     st.write(f'#### _Wish your leetcode profile was this consistent huh?_')
     st.divider()
-    vid_ids = df_tot['video_id'].sample(n = 600).tolist()
+    vid_ids = df_tot['video_id'].sample(n = 1000).tolist()
     list_genres = get_video_details(vid_ids, key)
     df_genres = pd.DataFrame(list_genres)
     temp = df_genres['genre'].value_counts().reset_index()

@@ -6,7 +6,11 @@ import pandas as pd
 import plost
 import requests
 import isodate
-st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title="Youtube Rewind 2024",
+    page_icon="https://cdn3.iconfinder.com/data/icons/pixel-social-media-2/16/Youtube-512.png",
+    layout="wide",
+)
 st.image('https://cdn3.iconfinder.com/data/icons/pixel-social-media-2/16/Youtube-512.png', width=100)
 st.title('YouTube Rewind 2024')
 uploaded_file = st.file_uploader("Upload watch-history.json", type=["json"])

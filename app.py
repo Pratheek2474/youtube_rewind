@@ -34,6 +34,8 @@ def load_data(file):
     df1['day'] = df1['time'].dt.day
     df1['month'] = df1['time'].dt.month_name()
     df1['day_of_week'] = df1['time'].dt.day_name()
+    df1['year'] = df1['time'].dt.year
+    df1 = df1[df1['year'] == 2024]
     subtitles_count = df1['channel'].value_counts().reset_index()
     subtitles_count = subtitles_count.merge(df1[['channelId', 'channel']], on='channel').drop_duplicates().reset_index(drop=True)
     month_count = df1['month'].value_counts().reset_index()
@@ -241,7 +243,7 @@ if uploaded_file is not None:
             data=temp2,
             theta='Percentage',
             color='genre')
-    st.write(f'#### _You watched a lot of {temp['genre'][0]} content overall, but when it comes to long-'
+    st.write(f'#### _You watched a lot of {temp['genre'][0]} content overall, and when it comes to long-'
              f'form content, it was mostly {temp2['genre'][0]}_')
 
 

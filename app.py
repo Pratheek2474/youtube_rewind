@@ -254,4 +254,21 @@ if uploaded_file is not None:
     st.write(f'#### _You watched a lot of {temp['genre'][0]} content overall, and when it comes to long-'
              f'form content, it was mostly {temp2['genre'][0]}_')
 
+else:
+    st.write('### Please upload your watch-history.json file to get started!')
+    st.write('#### _Not sure how to download?_')
+    st.write(' ### Step 1: Go to [Google Takeout](https://takeout.google.com/u/2/)')
+    st.write('### Step 2: Deselct all and select only YouTube')
+    st.image('step2.png',width=1000)
+    st.write('### Step 3: Select the format as JSON under "Multiple formats" and select history data under "All youtube data" included')
+    st.image('step3_1.png', width=1000)
+    col1,col2 = st.columns([1,4])
+    with col1:
+        st.image('step3_2.png', width=250)
+    with col2:
+        st.image('step3_3.png', width=300)
+    st.write('### Step 4: Select a suitable destination and export the data')
+    st.image('step4.png', width=1000)
+    st.write('### Step 5: Download the data and upload the watch-history.json file here. It usually takes less than 2 mins for the data to be ready for download.')
+    st.write('## Enjoy the analysis!! ✨')
 

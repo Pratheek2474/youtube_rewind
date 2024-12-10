@@ -17,7 +17,7 @@ st.write("#### ✨YoutubeRewind is a fun project that gives YouTube users a cool
 st.write("##### It takes your watch history and turns it into interesting stats 📊, like your most-watched channels, favorite videos, and how your viewing patterns change over time. You can even see which genres, like gaming or education, you watch the most.")
 st.write("##### ‍💻Built with Streamlit, it’s all about keeping things simple and visually fun with charts, heatmaps, and timelines.")
 uploaded_file = st.file_uploader("Upload watch-history.json", type=["json"])
-st.write('Make sure to uplaod a valid file for now plis🥺. I am working on a feature to validate the file type.')
+st.write('Make sure to uplaod a valid file for now plis🥺. I add a feature to validate the file type later.')
 
 def load_data(file):
     #load data

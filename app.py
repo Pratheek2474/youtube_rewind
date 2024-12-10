@@ -178,7 +178,7 @@ if uploaded_file is not None:
         st.write(f'#### _Winter is coming, huh?_')
     st.write()
     st.write('---')
-    st.header('📺Lets see who you watched the most')
+    st.header('📺Lets see what you watched the most this year:')
     url_vid1 = f'https://www.googleapis.com/youtube/v3/videos?part=snippet&id={vid_data['video_id'][0]}&key={key}'
     response_vid1 = requests.get(url_vid1).json()
     col1, col2 = st.columns([2, 2])
